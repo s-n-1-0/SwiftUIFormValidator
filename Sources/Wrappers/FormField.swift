@@ -9,7 +9,7 @@ import Combine
 public class FormField<Value: Equatable, Validator: Validatable> where Value == Validator.Value {
 
     private var subject: CurrentValueSubject<Value, Never>
-    private let validator: Validator
+    public var validator: Validator
 
     public var wrappedValue: Value {
         get {
